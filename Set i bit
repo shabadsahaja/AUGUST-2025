@@ -1,0 +1,16 @@
+def setIBit(n,k):
+  n=n|(1<<k)
+  return n
+n=int(input())
+k=int(input())
+print(setIBit(n,k))
+
+
+
+output:
+n=5
+k=2
+5
+
+
+
