@@ -1,0 +1,7 @@
+def removeLastMostSetBit(n):
+  n=n&(n-1)
+  return n
+n=int(input())
+print(removeLastMostSetBit(n))
+
+
