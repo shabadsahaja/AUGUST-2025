@@ -1,0 +1,18 @@
+def threeSum(nums,target):
+    tip_sum=set()
+    n=len(nums)
+    for i in range(0,n-1):
+        d={}
+        for j in range(i+1,n):
+            k = target - (nums[i] + nums[j])
+            if k in d:
+                temp=[nums[i],nums[j],k]
+                temp.sort()
+                tip_sum.add(tuple(temp))
+            else:
+                d[nums[j]]=j
+    ans=[]
+    for tuplet in tip_sum:
+        ans.append(list(tuplet))
+    return ans
+TIME COMPLEXITY :O(N^2)
